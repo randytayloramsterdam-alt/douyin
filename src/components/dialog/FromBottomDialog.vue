@@ -174,11 +174,11 @@ const onEnd = () => {
   flex-direction: column;
 
   &.dark {
-    background: var(--main-bg);
+    background: var(--jx-surface);
   }
 
   &.light {
-    background: whitesmoke;
+    background: var(--jx-bg);
   }
 
   &.white {
@@ -202,10 +202,10 @@ const onEnd = () => {
     touch-action: pan-y;
 
     &.dark {
-      background: var(--main-bg);
+      background: var(--jx-surface);
 
       .content {
-        background: var(--second-btn-color);
+        background: var(--jx-line);
       }
     }
 

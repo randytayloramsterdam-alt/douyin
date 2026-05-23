@@ -110,17 +110,13 @@
           :change-active-index-use-anim="false"
           v-model:index="state.navIndex"
         >
-          <!--          <SlideItem></SlideItem>-->
-          <Slide0 :active="state.navIndex === 0 && state.baseIndex === 1" />
+          <Slide2 :active="state.navIndex === 0 && state.baseIndex === 1" />
           <SlideItem>
-            <LongVideo :active="state.navIndex === 1 && state.baseIndex === 1" />
+            <RecommendPreview :active="state.navIndex === 1 && state.baseIndex === 1" />
           </SlideItem>
-          <!--          <SlideItem></SlideItem>-->
-          <Slide2 :active="state.navIndex === 2 && state.baseIndex === 1" />
           <SlideItem>
-            <Community :active="state.navIndex === 3 && state.baseIndex === 1" />
+            <LongVideo :active="state.navIndex === 2 && state.baseIndex === 1" />
           </SlideItem>
-          <Slide4 :active="state.navIndex === 4 && state.baseIndex === 1" />
         </SlideHorizontal>
 
         <BaseFooter v-bind:init-tab="1" />
@@ -230,10 +226,8 @@ import ConfirmDialog from '../../components/dialog/ConfirmDialog.vue'
 import FollowSetting2 from '@/pages/home/components/FollowSetting2.vue'
 import ShareToFriend from '@/pages/home/components/ShareToFriend.vue'
 import UserPanel from '@/components/UserPanel.vue'
-import Community from '@/pages/home/slide/Community.vue'
-import Slide0 from '@/pages/home/slide/Slide0.vue'
 import Slide2 from '@/pages/home/slide/Slide2.vue'
-import Slide4 from '@/pages/home/slide/Slide4.vue'
+import RecommendPreview from '@/pages/home/slide/RecommendPreview.vue'
 import { DefaultUser } from '@/utils/const_var'
 import { _no } from '@/utils'
 import LongVideo from '@/pages/home/slide/LongVideo.vue'
@@ -248,7 +242,7 @@ const isMobile = ref(/Mobi|Android|iPhone/i.test(navigator.userAgent))
 const state = reactive({
   active: true,
   baseIndex: 1,
-  navIndex: 4,
+  navIndex: 1,
   itemIndex: 0,
   test: '',
   recommendList: [],
@@ -366,22 +360,24 @@ function dislike() {
     width: 80%;
     height: calc(var(--vh, 1vh) * 100);
     overflow: auto;
-    background: rgb(22, 22, 22);
-    padding: 10rem;
+    background: var(--jx-bg);
+    padding: 14rem;
     padding-bottom: 20rem;
     box-sizing: border-box;
 
     & > .header {
       font-size: 16rem;
       display: flex;
-      color: white;
+      color: var(--jx-text);
       justify-content: space-between;
       align-items: center;
 
       .right {
         border-radius: 20rem;
         padding: 8rem 15rem;
-        background: rgb(36, 36, 36);
+        background: var(--jx-surface);
+        border: 1px solid var(--jx-line);
+        box-shadow: var(--jx-shadow);
         display: flex;
         align-items: center;
         font-size: 14rem;
@@ -395,15 +391,17 @@ function dislike() {
 
     .card {
       margin-top: 10rem;
-      border-radius: 12rem;
+      border-radius: 8rem;
       padding: 15rem;
-      background: rgb(29, 29, 29);
+      background: var(--jx-card-bg);
+      border: 1px solid var(--jx-line);
+      box-shadow: var(--jx-shadow);
 
       .header {
         margin-bottom: 8rem;
         font-size: 14rem;
         display: flex;
-        color: white;
+        color: var(--jx-text);
         justify-content: space-between;
         align-items: center;
 
@@ -412,7 +410,7 @@ function dislike() {
           align-items: center;
           font-size: 12rem;
           gap: 4rem;
-          color: gray;
+          color: var(--jx-text-muted);
 
           svg {
             font-size: 16rem;
@@ -421,7 +419,7 @@ function dislike() {
       }
 
       .content {
-        color: white;
+        color: var(--jx-text);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
 
@@ -436,6 +434,7 @@ function dislike() {
 
           svg {
             font-size: 28rem;
+            color: var(--jx-accent);
           }
 
           .xcx {
@@ -469,7 +468,7 @@ function dislike() {
   width: 100%;
   height: calc(var(--vh, 1vh) * 100 - var(--footer-height)) !important;
   overflow: hidden;
-  border-radius: 10rem;
+  border-radius: 0;
 }
 
 .guide {

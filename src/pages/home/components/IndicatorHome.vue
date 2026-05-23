@@ -11,20 +11,13 @@
       <div class="tab-ctn">
         <div class="tabs" ref="tabs">
           <div class="tab" :class="{ active: index === 0 }" @click.stop="change(0)">
-            <span>热点</span>
+            <span>关注</span>
           </div>
           <div class="tab" :class="{ active: index === 1 }" @click.stop="change(1)">
-            <span>长视频</span>
+            <span>推荐</span>
           </div>
           <div class="tab" :class="{ active: index === 2 }" @click.stop="change(2)">
-            <span>关注</span>
-            <img src="../../../assets/img/icon/live.webp" class="tab2-img" />
-          </div>
-          <div class="tab" :class="{ active: index === 3 }" @click.stop="change(3)">
-            <span>经验</span>
-          </div>
-          <div class="tab" :class="{ active: index === 4 }" @click.stop="change(4)">
-            <span>推荐</span>
+            <span>热门</span>
           </div>
         </div>
         <div class="indicator" ref="indicator"></div>
@@ -196,15 +189,18 @@ export default {
 <style scoped lang="less">
 .indicator-home {
   position: absolute;
-  font-size: 16rem;
+  font-size: 17rem;
   top: 0;
   left: 0;
   z-index: 2;
   width: 100%;
-  color: white;
+  color: var(--jx-text);
   height: var(--home-header-height);
   transition: all 0.3s;
-  font-weight: bold;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1rem 0 rgba(231, 235, 242, 0.7);
+  backdrop-filter: blur(18rem);
 
   .notice {
     opacity: 0;
@@ -227,29 +223,37 @@ export default {
   .toolbar {
     z-index: 2;
     position: relative;
-    color: white;
+    color: var(--jx-text);
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    padding: 0 15rem;
+    padding: 0 12rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .tab-ctn {
-      width: 80%;
+      width: 52%;
+      height: 100%;
+      padding: 0;
       position: relative;
 
       .tabs {
         display: flex;
         justify-content: space-between;
+        height: 100%;
 
         .tab {
           transition: color 0.3s;
-          color: rgba(white, 0.7);
+          color: rgba(23, 25, 31, 0.56);
           position: relative;
           font-size: 17rem;
           cursor: pointer;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0;
 
           .tab1-img {
             position: absolute;
@@ -269,26 +273,38 @@ export default {
           }
 
           &.active {
-            color: white;
+            color: var(--jx-text);
+            font-weight: 700;
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              bottom: 6rem;
+              width: 22rem;
+              height: 3rem;
+              border-radius: 999rem;
+              background: var(--jx-accent-cyan);
+              transform: translateX(-50%);
+            }
           }
         }
       }
 
       .indicator {
-        //transition: left .3s;
-        position: absolute;
-        bottom: -6rem;
-        height: 2.6rem;
-        width: 26rem;
-        //width: calc(100% / 5);
-        background: #fff;
-        border-radius: 5rem;
+        display: none;
       }
     }
 
     .search {
-      color: white;
-      font-size: 24rem;
+      color: var(--jx-text);
+      font-size: 28rem;
+      width: 34rem;
+      height: 34rem;
+      border-radius: 50%;
+      padding: 3rem;
+      box-sizing: border-box;
+      background: transparent;
     }
   }
 

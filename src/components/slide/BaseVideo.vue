@@ -414,7 +414,7 @@ function touchend(e) {
     transition:
       height,
       margin-top 0.3s;
-    //background: black;
+    background: #050505;
     /*position: absolute;*/
   }
 
@@ -430,6 +430,7 @@ function touchend(e) {
       bottom: 0;
       width: 100%;
       transition: all 0.3s;
+      padding-bottom: 8rem;
 
       .comment-status {
         display: flex;
@@ -511,7 +512,7 @@ function touchend(e) {
       z-index: 10;
       @w: 90%;
       position: absolute;
-      bottom: -1rem;
+      bottom: 4rem;
       height: 10rem;
       left: calc((100% - @w) / 2);
       width: @w;
@@ -544,7 +545,7 @@ function touchend(e) {
         position: absolute;
         width: 100%;
         height: @h;
-        background: #4f4f4f;
+        background: rgba(255, 255, 255, 0.24);
         border-radius: @radius;
       }
 
@@ -555,7 +556,7 @@ function touchend(e) {
         height: calc(@h + 0.5rem);
         width: @p;
         border-radius: @radius 0 0 @radius;
-        background: #777777;
+        background: linear-gradient(90deg, var(--jx-accent), var(--jx-accent-cyan));
         z-index: 1;
       }
 
@@ -564,7 +565,7 @@ function touchend(e) {
         width: @h+2;
         height: @h+2;
         border-radius: 50%;
-        background: gray;
+        background: white;
         z-index: 2;
         transform: translate(-1rem, 1rem);
       }

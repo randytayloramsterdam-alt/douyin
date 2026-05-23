@@ -92,13 +92,17 @@ export default {
 
   &.dark {
     .search {
-      background: var(--second-btn-color-tran);
+      background: var(--jx-surface-soft);
+
+      input {
+        color: var(--jx-text);
+      }
     }
   }
 
   &.light {
     .search {
-      background: whitesmoke;
+      background: var(--jx-surface-soft);
 
       input {
         color: black;
@@ -117,7 +121,7 @@ export default {
     flex: 1;
     position: relative;
     height: 36rem;
-    border-radius: 2px;
+    border-radius: 999rem;
     display: flex;
     align-items: center;
 
@@ -129,7 +133,7 @@ export default {
 
     input {
       //margin-top: .4rem;
-      color: white;
+      color: var(--jx-text);
       height: 50%;
       width: 100%;
       outline: none;

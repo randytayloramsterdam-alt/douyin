@@ -353,7 +353,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 10rem 10rem 0 0;
+  border-radius: 8rem 8rem 0 0;
 
   .num {
     width: 100%;
@@ -386,7 +386,7 @@ export default {
 .comment {
   color: #000;
   width: 100%;
-  background: #fff;
+  background: var(--jx-surface);
   z-index: 5;
 
   .wrapper {
@@ -400,7 +400,7 @@ export default {
 
     .item {
       width: 100%;
-      margin-bottom: 15rem;
+      margin-bottom: 12rem;
 
       .main {
         width: 100%;
@@ -501,7 +501,7 @@ export default {
               display: flex;
 
               .time {
-                color: #c4c3c3;
+                color: var(--jx-text-muted);
                 margin-right: 10rem;
               }
 
@@ -534,12 +534,12 @@ export default {
     }
   }
 
-  @normal-bg-color: rgb(35, 38, 47);
+  @normal-bg-color: var(--jx-surface-soft);
   @chat-bg-color: rgb(105, 143, 244);
 
   .input-toolbar {
     border-radius: 10rem 10rem 0 0;
-    background: white;
+    background: var(--jx-surface);
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -595,7 +595,7 @@ export default {
       display: flex;
       align-items: center;
       padding: 10rem 15rem;
-      border-top: 1px solid #e2e1e1;
+      border-top: 1px solid var(--jx-line);
 
       .input-wrapper {
         flex: 1;
@@ -604,7 +604,7 @@ export default {
         justify-content: space-between;
         box-sizing: border-box;
         padding: 5rem 10rem;
-        background: #eee;
+        background: var(--jx-surface-soft);
         border-radius: 20rem;
 
         .right {

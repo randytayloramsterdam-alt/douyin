@@ -197,9 +197,9 @@ function showDetail(e, item) {
 <style scoped lang="less">
 #Community {
   font-size: 14rem;
-  color: white;
+  color: var(--jx-text);
   padding-top: var(--home-header-height);
-  background: rgb(21, 23, 36);
+  background: var(--jx-bg);
 
   .Scroll {
     height: calc(
@@ -214,13 +214,15 @@ function showDetail(e, item) {
     width: 96%;
     box-sizing: border-box;
     padding: 10rem;
-    border: 1px solid #646464;
+    border: 1px solid var(--jx-line);
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 16rem;
     margin-bottom: 10rem;
-    border-radius: 8rem;
+    border-radius: 999rem;
+    background: var(--jx-surface);
+    box-shadow: var(--jx-shadow);
 
     .left {
       display: flex;
@@ -241,9 +243,11 @@ function showDetail(e, item) {
 }
 
 .card {
-  border-radius: 4rem;
+  border-radius: 8rem;
   overflow: hidden;
-  background: var(--main-bg);
+  background: var(--jx-card-bg);
+  border: 1px solid var(--jx-line);
+  box-shadow: var(--jx-shadow);
 
   .poster {
     display: block;
@@ -253,7 +257,7 @@ function showDetail(e, item) {
   }
 
   .bottom {
-    color: gainsboro;
+    color: var(--jx-text);
     padding: 10rem;
     padding-bottom: 15rem;
 
@@ -270,6 +274,7 @@ function showDetail(e, item) {
       .user {
         display: flex;
         font-size: 12rem;
+        color: var(--jx-text-muted);
 
         img {
           width: 15rem;
@@ -285,6 +290,7 @@ function showDetail(e, item) {
 
         svg {
           font-size: 15rem;
+          color: var(--jx-accent);
         }
 
         .num {

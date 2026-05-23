@@ -144,8 +144,9 @@ const vClick = useClick()
     .avatar {
       width: @w;
       height: @w;
-      border: 3rem solid white;
+      border: 2rem solid rgba(255, 255, 255, 0.92);
       border-radius: 50%;
+      box-shadow: 0 6rem 16rem rgba(0, 0, 0, 0.28);
     }
 
     .options {
@@ -155,7 +156,7 @@ const vClick = useClick()
       left: 0;
       right: 0;
       bottom: -5px;
-      background: red;
+      background: var(--jx-accent);
       //background: black;
       width: 18rem;
       height: 18rem;
@@ -202,6 +203,12 @@ const vClick = useClick()
 
     @width: 35rem;
 
+    > div,
+    > svg,
+    > img {
+      filter: drop-shadow(0 3rem 8rem rgba(0, 0, 0, 0.28));
+    }
+
     img {
       width: @width;
       height: @width;
@@ -209,11 +216,13 @@ const vClick = useClick()
 
     span {
       font-size: 12rem;
+      margin-top: 3rem;
+      text-shadow: 0 1rem 6rem rgba(0, 0, 0, 0.45);
     }
   }
 
   .icon {
-    font-size: 40rem;
+    font-size: 38rem;
   }
 
   .loved {

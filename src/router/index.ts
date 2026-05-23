@@ -17,8 +17,8 @@ const router = createRouter({
 })
 router.beforeEach((to, from) => {
   const baseStore = useBaseStore()
-  //footer下面的5个按钮，对跳不要用动画
-  const noAnimation = ['/', '/home', '/me', '/shop', '/message', '/publish', '/home/live', '/test']
+  //footer下面的按钮，对跳不要用动画
+  const noAnimation = ['/', '/home', '/me', '/message', '/publish', '/home/live', '/test']
   if (noAnimation.indexOf(from.path) !== -1 && noAnimation.indexOf(to.path) !== -1) {
     return true
   }

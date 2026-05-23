@@ -19,12 +19,6 @@ const routes: RouteRecordRaw[] = [
   },
   { path: '/home/live', component: () => import('@/pages/home/LivePage.vue') },
 
-  { path: '/shop', component: () => import('@/pages/shop/Shop.vue') },
-  {
-    path: '/shop/detail',
-    component: () => import('@/pages/shop/GoodsDetail.vue')
-  },
-
   { path: '/me', component: () => import('@/pages/me/Me.vue') },
   {
     path: '/me/edit-userinfo',

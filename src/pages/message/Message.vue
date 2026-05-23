@@ -3,8 +3,11 @@
     <div class="no-search" v-show="!data.searching">
       <header>
         <Icon @click="data.createChatDialog = true" icon="formkit:add" />
-        <Icon icon="tabler:camera-selfie" />
-        <Icon @click="data.searching = true" icon="tabler:search" />
+        <div class="title">关注</div>
+        <div class="actions">
+          <Icon icon="tabler:camera-selfie" />
+          <Icon @click="data.searching = true" icon="tabler:search" />
+        </div>
       </header>
 
       <Scroll ref="mainScroll">
@@ -165,28 +168,6 @@
                 </div>
                 <div class="detail">
                   发作品得流量
-                  <div class="point"></div>
-                  05-26
-                </div>
-              </div>
-              <div class="right">
-                <div class="not-read"></div>
-              </div>
-            </div>
-          </div>
-          <!--      直播通知-->
-          <div class="message" @click="nav('/message/live-notice')">
-            <div class="avatar">
-              <img src="../../assets/img/icon/msg-icon8.webp" alt="" class="head-image" />
-            </div>
-            <div class="content">
-              <div class="left">
-                <div class="name">
-                  <span>直播通知</span>
-                  <span class="tag">官方</span>
-                </div>
-                <div class="detail">
-                  举报结果通知
                   <div class="point"></div>
                   05-26
                 </div>
@@ -369,7 +350,7 @@
           <BaseMask />
         </div>
       </transition>
-      <BaseFooter v-bind:init-tab="4" />
+      <BaseFooter v-bind:init-tab="2" />
     </div>
 
     <div class="searching" v-show="data.searching">
@@ -520,7 +501,7 @@ async function loadRecommendData() {
   right: 0;
   font-size: 14rem;
   background: var(--color-message);
-  color: white;
+  color: var(--jx-text);
 
   .no-search {
     height: calc(var(--vh, 1vh) * 100);
@@ -536,6 +517,20 @@ async function loadRecommendData() {
       box-sizing: border-box;
       position: relative;
       font-size: 24rem;
+      color: var(--jx-text);
+
+      .title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20rem;
+        font-weight: 700;
+      }
+
+      .actions {
+        display: flex;
+        gap: 16rem;
+      }
     }
 
     .create-chat-wrapper {
@@ -615,7 +610,7 @@ async function loadRecommendData() {
         bottom: 0;
         left: 0;
         right: 0;
-        background: var(--main-bg);
+        background: var(--jx-surface);
         //background: red;
         display: flex;
         align-items: center;
@@ -629,7 +624,7 @@ async function loadRecommendData() {
           align-items: center;
           font-size: 14rem;
           justify-content: center;
-          border-radius: 10rem;
+          border-radius: 8rem;
           background: var(--primary-btn-color);
         }
       }
@@ -801,7 +796,8 @@ async function loadRecommendData() {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--second-btn-color-tran);
+            background: var(--jx-surface);
+            border: 1px solid var(--jx-line);
             margin-bottom: 10rem;
 
             img {
@@ -824,7 +820,7 @@ async function loadRecommendData() {
 
           &.on-line::before {
             content: ' ';
-            border: 4rem solid black;
+            border: 4rem solid var(--jx-surface);
             width: 18rem;
             height: 18rem;
             background: rgb(115, 254, 73);
@@ -838,7 +834,7 @@ async function loadRecommendData() {
         span {
           width: 64rem;
           font-size: 12rem;
-          color: white;
+          color: var(--jx-text);
           display: block;
           text-align: center;
           word-break: break-all;
@@ -851,17 +847,23 @@ async function loadRecommendData() {
 
     .messages {
       margin-top: 20rem;
+      margin-left: 10rem;
+      margin-right: 10rem;
 
       .message {
         display: flex;
         align-items: center;
+        background: var(--jx-card-bg);
+        border: 1px solid var(--jx-line);
+        border-radius: 8rem;
+        margin-bottom: 8rem;
 
         &.top {
-          background: #353a4f;
+          background: var(--jx-surface-soft);
         }
 
         &:active {
-          background: rgb(57, 57, 57);
+          background: var(--jx-surface-soft);
         }
 
         .avatar {
@@ -878,7 +880,7 @@ async function loadRecommendData() {
 
           &.on-line::before {
             content: ' ';
-            border: 3rem solid black;
+            border: 3rem solid var(--jx-surface);
             width: 12rem;
             height: 12rem;
             background: rgb(115, 254, 73);
@@ -899,7 +901,7 @@ async function loadRecommendData() {
           .left {
             .name {
               font-size: 16rem;
-              color: white;
+              color: var(--jx-text);
               display: flex;
               align-items: flex-start;
 
@@ -1020,7 +1022,7 @@ async function loadRecommendData() {
           }
 
           .l-button {
-            color: white;
+            color: var(--jx-text);
           }
 
           .name {

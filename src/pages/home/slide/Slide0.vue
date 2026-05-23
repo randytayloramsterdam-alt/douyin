@@ -5,23 +5,23 @@
         <div class="card" @touchmove.capture="stop">
           <div class="nav-item">
             <img src="@/assets/img/icon/msg-icon9.webp" alt="" />
-            <span>美食</span>
+            <span>美食旅行</span>
           </div>
           <div class="nav-item">
             <img src="@/assets/img/icon/msg-icon9.webp" alt="" />
-            <span>休闲娱乐</span>
+            <span>科学科普</span>
           </div>
           <div class="nav-item">
             <img src="@/assets/img/icon/msg-icon9.webp" alt="" />
-            <span>游玩</span>
+            <span>数码科技</span>
           </div>
           <div class="nav-item">
             <img src="@/assets/img/icon/msg-icon9.webp" alt="" />
-            <span>丽人/美发</span>
+            <span>文化艺术</span>
           </div>
           <div class="nav-item">
             <img src="@/assets/img/icon/msg-icon9.webp" alt="" />
-            <span>住宿</span>
+            <span>潮流运动</span>
           </div>
           <div class="nav-item">
             <img src="@/assets/img/icon/msg-icon9.webp" alt="" />
@@ -135,7 +135,7 @@ onUnmounted(() => {})
       font-size: 14rem;
       color: gray;
       //background: #f9f9f9;
-      background: linear-gradient(to right, rgb(36, 34, 84), rgb(7, 5, 16));
+      background: linear-gradient(180deg, rgba(245, 247, 251, 0.98), rgba(245, 247, 251, 0));
 
       display: flex;
       justify-content: center;
@@ -148,7 +148,9 @@ onUnmounted(() => {})
         border-radius: 8rem;
         width: 100%;
         //background: white;
-        background: linear-gradient(to right, rgb(53, 51, 110), rgb(29, 21, 66));
+        background: var(--jx-card-bg);
+        border: 1px solid var(--jx-line);
+        box-shadow: var(--jx-shadow);
         box-sizing: border-box;
         display: flex;
         align-items: flex-end;
@@ -175,15 +177,16 @@ onUnmounted(() => {})
 
   .sub-type-notice {
     position: absolute;
-    background: rgba(black, 0.4);
+    background: rgba(255, 255, 255, 0.86);
+    color: var(--jx-text);
     top: 100rem;
     left: 50%;
     transform: translateX(-50%);
     padding: 3rem 12rem;
-    border-radius: 10rem;
+    border-radius: 999rem;
     z-index: 3;
     font-size: 12rem;
-    color: white;
+    color: var(--jx-text);
   }
 }
 </style>

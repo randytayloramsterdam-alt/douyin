@@ -37,6 +37,7 @@ const state = reactive({
         </div>
       </div>
       <div class="live" v-if="props.isLive">直播中</div>
+      <div class="curated-tag">精选内容</div>
       <div class="name mb1r f18 fb" @click.stop="$emit('goUserInfo')">
         @{{ item?.author?.nickname }}
       </div>
@@ -80,6 +81,18 @@ const state = reactive({
   .content {
     color: #fff;
     text-align: left;
+    text-shadow: 0 1rem 8rem rgba(0, 0, 0, 0.35);
+
+    .curated-tag {
+      display: inline-flex;
+      margin-bottom: 8rem;
+      padding: 3rem 8rem;
+      border-radius: 999rem;
+      font-size: 11rem;
+      color: white;
+      background: linear-gradient(90deg, var(--jx-accent), var(--jx-accent-cyan));
+      box-shadow: 0 6rem 14rem rgba(254, 44, 85, 0.22);
+    }
 
     .location-wrapper {
       display: flex;
@@ -92,7 +105,8 @@ const state = reactive({
         font-size: 12rem;
         padding: 4rem;
         border-radius: 3rem;
-        background: var(--second-btn-color-tran);
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(12rem);
 
         .gang {
           height: 8rem;
@@ -109,7 +123,7 @@ const state = reactive({
     }
 
     .live {
-      border-radius: 3rem;
+      border-radius: 999rem;
       margin-bottom: 10rem;
       padding: 3rem 6rem;
       font-size: 11rem;

@@ -1,7 +1,7 @@
 <template>
   <div class="Search">
     <div class="header">
-      <dy-back mode="light" @click="router.back" class="mr1r"></dy-back>
+      <dy-back mode="dark" @click="router.back" class="mr1r"></dy-back>
       <Search placeholder="搜索用户名字/抖音号" :isShowRightText="true" @notice="_no"></Search>
     </div>
     <div class="content">
@@ -743,8 +743,9 @@ function toggle() {
   bottom: 0;
   top: 0;
   overflow: auto;
-  color: white;
+  color: var(--jx-text);
   font-size: 14rem;
+  background: var(--jx-bg);
 
   .type {
     display: flex;
@@ -767,7 +768,8 @@ function toggle() {
 
   .header {
     z-index: 4;
-    background: var(--main-bg);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(18rem);
     height: 60rem;
     font-size: 14rem;
     padding: 0 var(--page-padding);
@@ -864,7 +866,7 @@ function toggle() {
 
           &.active {
             transform: scale(1.2);
-            color: white;
+            color: var(--jx-text);
           }
 
           &:nth-child(1) {
@@ -881,9 +883,11 @@ function toggle() {
       .slide0 {
         box-sizing: border-box;
         margin: 0 var(--page-padding) 50rem var(--page-padding);
-        background: linear-gradient(to right, rgb(32, 29, 36), rgb(50, 29, 38));
+        background: var(--jx-card-bg);
+        border: 1px solid var(--jx-line);
+        box-shadow: var(--jx-shadow);
         padding: var(--page-padding);
-        border-radius: 10rem;
+        border-radius: 8rem;
 
         .l-row {
           font-size: 14rem;
@@ -920,7 +924,7 @@ function toggle() {
               display: flex;
               align-items: center;
               font-size: 14rem;
-              color: white;
+              color: var(--jx-text);
 
               .desc {
                 max-width: 85%;
@@ -941,10 +945,11 @@ function toggle() {
       .slide1 {
         box-sizing: border-box;
         margin: 0 var(--page-padding) 50rem var(--page-padding);
-        background: rgb(20, 22, 34);
-        border: 1px solid rgba(31, 34, 52, 0.5);
+        background: var(--jx-card-bg);
+        border: 1px solid var(--jx-line);
+        box-shadow: var(--jx-shadow);
         padding: var(--page-padding);
-        border-radius: 10rem;
+        border-radius: 8rem;
 
         .l-row {
           font-size: 14rem;
@@ -969,7 +974,7 @@ function toggle() {
               margin-right: 15rem;
 
               &.top {
-                color: yellow;
+                color: var(--jx-accent);
               }
             }
           }
@@ -988,7 +993,7 @@ function toggle() {
               display: flex;
               align-items: center;
               font-size: 14rem;
-              color: white;
+              color: var(--jx-text);
 
               .avatar-wrapper {
                 @width: 35rem;
@@ -1054,10 +1059,11 @@ function toggle() {
       .slide2 {
         box-sizing: border-box;
         margin: 0 var(--page-padding) 50rem var(--page-padding);
-        background: rgb(20, 22, 34);
-        border: 1px solid rgba(31, 34, 52, 0.5);
+        background: var(--jx-card-bg);
+        border: 1px solid var(--jx-line);
+        box-shadow: var(--jx-shadow);
         padding: var(--page-padding);
-        border-radius: 10rem;
+        border-radius: 8rem;
 
         .l-row {
           font-size: 14rem;
@@ -1082,7 +1088,7 @@ function toggle() {
               margin-right: 15rem;
 
               &.top {
-                color: yellow;
+                color: var(--jx-accent);
               }
             }
           }
@@ -1101,7 +1107,7 @@ function toggle() {
               display: flex;
               align-items: center;
               font-size: 14rem;
-              color: white;
+              color: var(--jx-text);
 
               .avatar-wrapper {
                 margin-right: 10rem;
@@ -1140,7 +1146,7 @@ function toggle() {
       .slide3 {
         box-sizing: border-box;
         margin: 0 var(--page-padding) 50rem var(--page-padding);
-        border-radius: 10rem;
+        border-radius: 8rem;
 
         .slide4-wrapper {
           padding: 5rem var(--page-padding);
@@ -1158,7 +1164,7 @@ function toggle() {
               background: var(--second-btn-color-tran);
 
               &.active {
-                color: white;
+                color: var(--jx-text);
                 background: var(--second-btn-color);
               }
             }
@@ -1187,7 +1193,7 @@ function toggle() {
                 margin-right: 15rem;
 
                 &.top {
-                  color: yellow;
+                  color: var(--jx-accent);
                 }
               }
             }
@@ -1206,7 +1212,7 @@ function toggle() {
                 display: flex;
                 align-items: center;
                 font-size: 14rem;
-                color: white;
+                color: var(--jx-text);
 
                 .avatar-wrapper {
                   @width: 35rem;
@@ -1306,7 +1312,7 @@ function toggle() {
         font-size: 12rem;
         padding: 10rem 10rem 0 10rem;
         text-align: center;
-        color: yellow;
+        color: var(--jx-accent);
       }
     }
   }

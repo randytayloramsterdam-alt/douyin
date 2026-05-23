@@ -8,44 +8,66 @@
 @import 'anim';
 
 :root {
-  --color-me: rgb(21, 23, 35);
-  --color-user: rgb(22, 24, 36);
-  --color-message: rgb(21, 21, 21);
-  --color-share-bg: rgb(38, 38, 38);
+  --jx-bg: #f5f7fb;
+  --jx-surface: #ffffff;
+  --jx-surface-soft: #eef2f7;
+  --jx-card-bg: #ffffff;
+  --jx-text: #17191f;
+  --jx-text-muted: #727887;
+  --jx-line: #e7ebf2;
+  --jx-accent: #fe2c55;
+  --jx-accent-cyan: #13d5e8;
+  --jx-shadow: 0 8rem 24rem rgba(20, 28, 45, 0.08);
+  --color-me: var(--jx-bg);
+  --color-user: var(--jx-bg);
+  --color-message: var(--jx-bg);
+  --color-share-bg: var(--jx-surface);
   --home-header-height: 44rem;
   --footer-height: 56rem;
   --common-header-height: 50rem;
   --indicator-height: 43rem;
   --page-padding: 15rem;
-  --main-bg: rgb(21, 23, 36);
-  --active-main-bg: rgb(31, 37, 52);
-  --second-text-color: rgb(186, 186, 187);
-  --second-btn-color: rgb(58, 58, 70);
-  --second-btn-color-tran: rgba(58, 58, 70, 0.4);
-  --line-color: rgb(37, 45, 66);
-  --line-color2: rgb(56, 54, 67);
-  --footer-color: black;
+  --main-bg: var(--jx-bg);
+  --active-main-bg: var(--jx-surface);
+  --second-text-color: var(--jx-text-muted);
+  --second-btn-color: var(--jx-surface-soft);
+  --second-btn-color-tran: rgba(236, 241, 248, 0.82);
+  --line-color: var(--jx-line);
+  --line-color2: #d8dee9;
+  --footer-color: rgba(255, 255, 255, 0.96);
 
-  --primary-btn-color: rgb(252, 47, 86);
-  --disable-primary-btn-color: rgba(252, 47, 86, 0.5);
+  --primary-btn-color: var(--jx-accent);
+  --disable-primary-btn-color: rgba(254, 44, 85, 0.45);
 
   --mask-dark: #000000bb;
   --mask-light: transparent;
   --mask-white: transparent;
   --mask-lightgray: rgba(0, 0, 0, 0.25);
   //消息页面
-  --msg-subpage-card-bg: rgb(28, 30, 43); //二级页面，卡片背景
+  --msg-subpage-card-bg: var(--jx-card-bg); //二级页面，卡片背景
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
-  //background: #2e3244;
   background: var(--main-bg);
   font-size: 1px;
   //letter-spacing: .11rem;
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+.jx-card {
+  background: var(--jx-card-bg);
+  border: 1px solid var(--jx-line);
+  border-radius: 8rem;
+  box-shadow: var(--jx-shadow);
+}
+
+.jx-pill {
+  border-radius: 999rem;
+  background: var(--jx-surface-soft);
+  color: var(--jx-text);
 }

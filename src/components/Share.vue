@@ -13,7 +13,7 @@
     <div class="share">
       <div class="title">
         <span>分享给朋友</span>
-        <dy-back mode="light" img="close" direction="right" @click.stop="closeShare"></dy-back>
+        <dy-back mode="dark" img="close" direction="right" @click.stop="closeShare"></dy-back>
       </div>
       <div class="content">
         <div class="friends list">
@@ -37,7 +37,7 @@
             />
           </div>
           <div class="option" @click.stop="closeShare($router.push('/message/share-to-friend'))">
-            <dy-back class="more" mode="light" direction="right"></dy-back>
+            <dy-back class="more" mode="dark" direction="right"></dy-back>
             <span>更多朋友</span>
           </div>
         </div>
@@ -238,8 +238,8 @@ function shared() {
   width: 100%;
   height: 100%;
   background: var(--color-share-bg);
-  border-radius: 10px 10px 0 0;
-  color: white;
+  border-radius: 8rem 8rem 0 0;
+  color: var(--jx-text);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -261,7 +261,7 @@ function shared() {
       height: 14rem;
       padding: 6rem;
       border-radius: 50%;
-      background: var(--second-btn-color-tran);
+      background: var(--jx-surface-soft);
       //background: rgb(56, 58, 57);
     }
   }
@@ -287,7 +287,7 @@ function shared() {
     gap: 22rem;
   }
 
-  @c: rgb(51, 51, 51);
+  @c: #eef2f7;
 
   .option {
     width: @avatar-width;
@@ -326,7 +326,6 @@ function shared() {
       padding: 19rem;
       border-radius: 50%;
       background: @c;
-      //background: rgb(56, 58, 57);
     }
 
     svg {
@@ -334,7 +333,7 @@ function shared() {
       width: unset;
       padding: 16rem;
       font-size: 26rem;
-      color: rgb(205, 205, 205);
+      color: var(--jx-text);
     }
 
     .small {
@@ -367,7 +366,7 @@ function shared() {
         outline: none;
         border: none;
         background: transparent;
-        color: #fff;
+        color: var(--jx-text);
       }
 
       .poster {

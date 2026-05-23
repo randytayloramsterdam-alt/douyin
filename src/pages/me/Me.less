@@ -13,6 +13,7 @@
 
 .Me {
   background: var(--color-me);
+  color: var(--jx-text);
   height: 100%;
   width: 100%;
   font-size: 14rem;
@@ -72,8 +73,9 @@
       padding: 7rem;
 
       .video {
-        background: var(--active-main-bg);
-        border-radius: 5rem;
+        background: var(--jx-card-bg);
+        border: 1px solid var(--jx-line);
+        border-radius: 8rem;
         padding: 10rem;
         margin-bottom: 7rem;
 
@@ -86,7 +88,7 @@
           .left {
             display: flex;
             align-items: center;
-            color: gainsboro;
+            color: var(--jx-text);
 
             img {
               height: 20rem;
@@ -145,8 +147,9 @@
       }
 
       .music {
-        background: var(--active-main-bg);
-        border-radius: 5rem;
+        background: var(--jx-card-bg);
+        border: 1px solid var(--jx-line);
+        border-radius: 8rem;
         padding: 10rem;
 
         .top {
@@ -158,7 +161,7 @@
           .left {
             display: flex;
             align-items: center;
-            color: gainsboro;
+            color: var(--jx-text);
 
             img {
               height: 15rem;
@@ -227,10 +230,12 @@
     }
 
     &.fixed {
-      background: var(--main-bg);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 1rem 0 var(--jx-line);
+      backdrop-filter: blur(18rem);
 
       .item {
-        background: var(--main-bg) !important;
+        background: var(--jx-surface-soft) !important;
       }
     }
 
@@ -244,8 +249,9 @@
       padding: 0 10rem;
       align-items: center;
       border-radius: 20rem;
-      background: rgba(82, 80, 80, 0.5);
-      color: white;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--jx-text);
+      box-shadow: var(--jx-shadow);
 
       svg {
         font-size: 16rem;
@@ -261,12 +267,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgba(82, 80, 80, 0.5);
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: var(--jx-shadow);
         border-radius: 50%;
         margin-left: 10rem;
 
         svg {
-          color: white;
+          color: var(--jx-text);
           font-size: 22rem;
         }
 
@@ -328,9 +335,9 @@
 
     .detail {
       transform: translateY(-10rem);
-      background: var(--main-bg);
+      background: var(--jx-bg);
       padding: @p @p 0 @p;
-      border-radius: 14rem 14rem 0 0;
+      border-radius: 8rem 8rem 0 0;
 
       .head {
         width: 100%;
@@ -341,14 +348,14 @@
         box-sizing: border-box;
 
         .heat {
-          color: var(--second-text-color);
+          color: var(--jx-text-muted);
           display: flex;
           gap: 26rem;
           align-items: center;
           justify-content: space-between;
 
           .num {
-            color: white;
+            color: var(--jx-text);
             font-size: 14rem;
             font-weight: bold;
           }
@@ -368,8 +375,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: 4rem;
-          background: var(--second-btn-color);
+          border-radius: 8rem;
+          background: var(--jx-text);
           color: white;
         }
       }
@@ -400,7 +407,8 @@
         .item {
           padding: 2rem 5rem;
           border-radius: 2rem;
-          background: var(--second-btn-color-tran);
+          background: var(--jx-surface);
+          border: 1px solid var(--jx-line);
           font-size: 12rem;
           display: flex;
           align-items: center;
@@ -421,12 +429,12 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          color: gray;
+          color: var(--jx-text-muted);
           gap: 6rem;
           font-size: 12rem;
 
           svg {
-            color: white;
+            color: var(--jx-accent);
             font-size: 24rem;
           }
         }
@@ -443,19 +451,19 @@
     padding: 0;
     margin: 0;
     position: absolute;
-    color: white;
-    background: var(--main-bg);
+    color: var(--jx-text);
+    background: var(--jx-surface);
 
     .line {
       height: 1px;
-      background: #cccccc;
-      opacity: 0.1;
+      background: var(--jx-line);
+      opacity: 1;
       margin: 5px 20px;
     }
 
     .li {
       box-sizing: border-box;
-      background: var(--main-bg);
+      background: var(--jx-surface);
       width: 100%;
       padding: 10rem 26rem;
       list-style: none;
@@ -468,7 +476,7 @@
       }
 
       &:active {
-        background: #454b65;
+        background: var(--jx-surface-soft);
       }
 
       img {
@@ -484,7 +492,7 @@
     font-size: 12rem;
     width: 100%;
     position: absolute;
-    background: var(--main-bg);
+    background: var(--jx-surface);
 
     .title {
       padding: 20rem 0 10rem 20rem;
@@ -495,7 +503,7 @@
       display: grid;
       grid-template-columns: 33.33% 33.33% 33.33%;
 
-      color: white;
+      color: var(--jx-text);
 
       .function {
         margin: 15px 0;
@@ -506,7 +514,7 @@
 
         img {
           border-radius: 50%;
-          background: var(--second-btn-color-tran);
+          background: var(--jx-surface-soft);
           padding: 6rem;
           height: 16rem;
           margin-bottom: 15px;
@@ -521,19 +529,19 @@
     width: 70vw;
     position: absolute;
     bottom: 0;
-    background: var(--main-bg);
+    background: var(--jx-surface);
 
     .button {
       box-sizing: border-box;
       width: calc(100% - 40rem);
-      background: var(--second-btn-color);
+      background: var(--jx-surface-soft);
       margin: 20rem;
       height: 45rem;
-      border-radius: 3px;
+      border-radius: 8rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: var(--jx-text);
 
       img {
         height: 25rem;

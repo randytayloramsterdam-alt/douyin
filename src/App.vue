@@ -37,7 +37,6 @@ watch(
       '/home',
       '/slide',
       '/me',
-      '/shop',
       '/message',
       '/publish',
       '/home/live',
@@ -82,6 +81,7 @@ onMounted(() => {
   width: 100%;
   position: relative;
   font-size: 14rem;
+  background: var(--main-bg);
 }
 
 @media screen and (min-width: 500px) {
@@ -90,6 +90,10 @@ onMounted(() => {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow:
+      0 0 0 1px var(--jx-line),
+      0 24rem 70rem rgba(18, 27, 44, 0.14);
+    overflow: hidden;
   }
 }
 

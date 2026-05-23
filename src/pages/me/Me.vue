@@ -234,7 +234,7 @@
             </SlideItem>
           </SlideRowList>
         </div>
-        <BaseFooter v-bind:init-tab="5" />
+        <BaseFooter v-bind:init-tab="3" />
         <transition name="fade">
           <div class="mask" v-if="baseActiveIndex === 1" @click="baseActiveIndex = 0"></div>
         </transition>
@@ -242,10 +242,6 @@
       <SlideItem style="width: 70vw; overflow: auto">
         <transition name="fade1">
           <div class="ul" v-if="!isMoreFunction">
-            <div class="li" @click="_no">
-              <img src="../../assets/img/icon/newicon/left_menu/shopping.png" alt="" />
-              <span>我的订单</span>
-            </div>
             <div class="li" @click="_no">
               <img src="../../assets/img/icon/newicon/left_menu/wallet.png" alt="" />
               <span>钱包</span>
@@ -321,10 +317,6 @@
               <div class="function" @click="_no">
                 <img src="../../assets/img/icon/newicon/left_menu/hot.png" alt="" />
                 <span>上热门</span>
-              </div>
-              <div class="function" @click="_no">
-                <img src="../../assets/img/icon/newicon/left_menu/shop.png" alt="" />
-                <span>小店随心推</span>
               </div>
               <div class="function" @click="_no">
                 <img src="../../assets/img/icon/newicon/left_menu/yuandi.png" alt="" />

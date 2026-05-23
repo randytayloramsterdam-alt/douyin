@@ -156,9 +156,9 @@ const nav = useNav()
 <style scoped lang="less">
 .long-video {
   font-size: 14rem;
-  color: white;
+  color: var(--jx-text);
   padding-top: var(--home-header-height);
-  background: rgb(21, 23, 36);
+  background: var(--jx-bg);
 
   .Scroll {
     height: calc(
@@ -172,19 +172,21 @@ const nav = useNav()
   grid-template-columns: repeat(2, 1fr);
   row-gap: 15rem;
   box-sizing: border-box;
+  padding: 0 10rem 16rem;
 
   .item {
-    margin: 0 10rem;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 8rem;
     position: relative;
 
     .poster {
-      border-radius: 12rem;
+      border-radius: 8rem;
       width: 100%;
       height: 140rem;
       object-fit: cover;
+      box-shadow: var(--jx-shadow);
     }
 
     .video-wrapper {
@@ -195,6 +197,7 @@ const nav = useNav()
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 8rem;
       }
 
       .options {
@@ -226,7 +229,7 @@ const nav = useNav()
 
     .title {
       height: 36rem;
-      color: white;
+      color: var(--jx-text);
       font-size: 14rem;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -248,10 +251,13 @@ const nav = useNav()
       bottom: 80rem;
       right: 10rem;
       font-size: 13rem;
+      padding: 2rem 6rem;
+      border-radius: 999rem;
+      background: rgba(0, 0, 0, 0.46);
     }
 
     .bottom {
-      color: gray;
+      color: var(--jx-text-muted);
       .f;
       font-size: 13rem;
 
@@ -289,7 +295,7 @@ const nav = useNav()
     &.big {
       grid-column-start: 1;
       grid-column-end: 3;
-      margin: 0;
+      margin: 0 0 4rem;
 
       &.pause {
         .duration {
@@ -313,7 +319,7 @@ const nav = useNav()
 
       .title,
       .bottom {
-        padding: 0 10rem;
+        padding: 0 4rem;
       }
     }
 

@@ -57,7 +57,7 @@ function back() {
 
 #BaseHeader {
   width: 100%;
-  color: white;
+  color: var(--jx-text);
 
   &.fixed {
     z-index: 2;
@@ -71,7 +71,9 @@ function back() {
     align-items: center;
     height: var(--common-header-height);
     box-sizing: border-box;
-    border-bottom: 1px solid #cccccc11;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--jx-line);
+    backdrop-filter: blur(18rem);
     position: relative;
 
     .left {

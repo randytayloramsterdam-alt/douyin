@@ -411,6 +411,7 @@ function touchEnd() {
   touch-action: pan-y;
   position: fixed;
   background: var(--color-user);
+  color: var(--jx-text);
   height: 100%;
   width: 100%;
   overflow: auto;
@@ -470,8 +471,9 @@ function touchEnd() {
       padding: 7rem;
 
       .video {
-        background: var(--active-main-bg);
-        border-radius: 5rem;
+        background: var(--jx-card-bg);
+        border: 1px solid var(--jx-line);
+        border-radius: 8rem;
         padding: 10rem;
         margin-bottom: 7rem;
 
@@ -484,7 +486,7 @@ function touchEnd() {
           .left {
             display: flex;
             align-items: center;
-            color: gainsboro;
+            color: var(--jx-text);
 
             img {
               height: 20rem;
@@ -536,8 +538,9 @@ function touchEnd() {
       }
 
       .audio {
-        background: var(--active-main-bg);
-        border-radius: 5rem;
+        background: var(--jx-card-bg);
+        border: 1px solid var(--jx-line);
+        border-radius: 8rem;
         padding: 10rem;
 
         .top {
@@ -549,7 +552,7 @@ function touchEnd() {
           .left {
             display: flex;
             align-items: center;
-            color: gainsboro;
+            color: var(--jx-text);
 
             img {
               height: 15rem;
@@ -656,9 +659,9 @@ function touchEnd() {
     .info {
       position: relative;
       z-index: 1;
-      background: var(--main-bg);
+      background: var(--jx-bg);
       padding: 0 20rem;
-      border-radius: 10rem 10rem 0 0;
+      border-radius: 8rem 8rem 0 0;
       margin-top: -20rem;
 
       .heat {
@@ -674,7 +677,7 @@ function touchEnd() {
           align-items: center;
 
           .num {
-            color: white;
+            color: var(--jx-text);
             font-size: 16rem;
             font-weight: bold;
             margin-right: 5rem;
@@ -683,7 +686,7 @@ function touchEnd() {
       }
 
       .signature {
-        color: white;
+        color: var(--jx-text);
         display: flex;
         align-items: center;
         margin-bottom: 5rem;
@@ -749,7 +752,7 @@ function touchEnd() {
           flex-direction: column;
 
           .top {
-            color: white;
+            color: var(--jx-text);
             font-size: 14rem;
           }
 
@@ -787,7 +790,7 @@ function touchEnd() {
 
           .no-follow {
             width: calc(100% - 5rem);
-            color: white;
+            color: var(--jx-text);
             border-radius: 4rem;
             background: var(--primary-btn-color);
             height: @width;
@@ -809,7 +812,7 @@ function touchEnd() {
             gap: @gap;
 
             .l-button {
-              color: white;
+              color: var(--jx-text);
               border-radius: 5rem;
               background: var(--second-btn-color);
               height: @width;
@@ -840,7 +843,7 @@ function touchEnd() {
         justify-content: center;
         border-radius: 4rem;
         background: var(--second-btn-color);
-        color: white;
+        color: var(--jx-text);
 
         &.option-recommend {
           .arrow {
@@ -903,13 +906,14 @@ function touchEnd() {
 
         .friend {
           position: relative;
-          background: var(--second-btn-color-tran);
+          background: var(--jx-card-bg);
+          border: 1px solid var(--jx-line);
           margin-right: 10rem;
           padding: 10rem;
           display: flex;
           flex-direction: column;
           align-items: center;
-          border-radius: 10rem;
+          border-radius: 8rem;
 
           .avatar {
             @width: 100rem;
@@ -921,7 +925,7 @@ function touchEnd() {
           .name {
             margin-top: 10rem;
             font-size: 12rem;
-            color: white;
+            color: var(--jx-text);
           }
 
           .tips {
@@ -959,8 +963,8 @@ function touchEnd() {
     }
 
     .total {
-      background: var(--main-bg);
-      color: white;
+      background: var(--jx-bg);
+      color: var(--jx-text);
       display: flex;
       align-items: center;
       padding: 15rem 20rem;
@@ -992,17 +996,19 @@ function touchEnd() {
     transition: all 0.2s;
 
     &.fixed {
-      background: var(--main-bg);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 1rem 0 var(--jx-line);
+      backdrop-filter: blur(18rem);
 
       img {
-        background: var(--main-bg) !important;
+        background: var(--jx-surface-soft) !important;
       }
     }
 
     .icon {
-      color: white;
+      color: var(--jx-text);
       border-radius: 50%;
-      background: rgba(82, 80, 80, 0.5);
+      background: rgba(255, 255, 255, 0.82);
       padding: 6rem;
       font-size: 18rem;
     }
@@ -1014,7 +1020,7 @@ function touchEnd() {
       .float-user {
         display: inline-flex;
         margin-left: 22rem;
-        color: white;
+        color: var(--jx-text);
         font-size: 12rem;
         align-items: center;
         background: var(--second-btn-color-tran);
@@ -1037,7 +1043,7 @@ function touchEnd() {
 
     .right {
       display: flex;
-      color: white;
+      color: var(--jx-text);
       align-items: center;
       position: relative;
       gap: 15rem;
@@ -1050,7 +1056,7 @@ function touchEnd() {
         padding-left: 5rem;
         align-items: center;
         border-radius: 20rem;
-        background: rgba(82, 80, 80, 0.5);
+        background: rgba(255, 255, 255, 0.82);
 
         img {
           padding: 6rem;
