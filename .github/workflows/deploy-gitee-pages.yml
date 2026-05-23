@@ -2,11 +2,7 @@
 name: Deploy Gitee Pages
 
 on:
-  # 仅在推送到默认分支时运行。
-  push:
-    branches: [ 'master' ]
-
-  # 这个选项可以使你手动在 Action tab 页面触发工作流
+  # 手动触发。Gitee Pages 需要额外配置 Gitee 仓库和 SSH secrets。
   workflow_dispatch:
 
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages。
